@@ -1,0 +1,21 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title><%= title %></title>
+</head>
+<body>
+  <div class="container">
+    <h1><%= title %></h1>
+      <ul>
+      <li><a href="/user/list">Gerenciar Usuários</a></li>
+      <li><a href="/project/list">Gerenciar Projetos</a></li>
+      <li><a href="/user/add">Adicionar Novo Usuário</a></li>
+      <li><a href="/project/add">Adicionar Novo Projeto</a></li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- views/users/userList.ejs -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Lista de Usuários</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Usuários</h1>
+    <ul>
+      <% users.forEach(user => { %>
+        <li>
+          <strong>Nome:</strong> <%= user.nome %> |
+          <strong>Email:</strong> <%= user.email %> |
+          <a href="/user/edit/<%= user._id %>">Editar</a>
+          <form action="/user/delete/<%= user._id %>?_method=DELETE" method="POST" style="display: inline;">
+            <button type="submit">Deletar</button>
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+    <a href="/">Voltar para a Página Inicial</a>
+  </div>
+</body>
+</html>

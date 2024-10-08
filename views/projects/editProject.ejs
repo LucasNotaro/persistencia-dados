@@ -1,0 +1,28 @@
+<!-- views/projects/editProject.ejs -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Editar Projeto</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Editar Projeto</h1>
+    <form action="/project/update/<%= project._id %>?_method=PUT" method="POST">
+      <label for="nome">Nome do Projeto:</label>
+      <input type="text" id="nome" name="nome" value="<%= project.nome %>" required>
+      
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao" value="<%= project.descricao %>">
+      
+      <label for="userId">ID do Usuário Responsável:</label>
+      <input type="text" id="userId" name="userId" value="<%= project.userId %>" required>
+      
+      <button type="submit">Atualizar Projeto</button>
+    </form>
+    <a href="/project/list">Voltar para a Lista de Projetos</a>
+  </div>
+</body>
+</html>

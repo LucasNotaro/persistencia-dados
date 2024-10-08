@@ -1,0 +1,33 @@
+<!-- views/projects/addProject.ejs -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Adicionar Projeto</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Adicionar Novo Projeto</h1>
+    <% if (errorMessage) { %>
+      <div class="alert alert-error">
+        <%= errorMessage %>
+      </div>
+    <% } %>
+    <form action="/project/add" method="POST">
+      <label for="nome">Nome do Projeto:</label>
+      <input type="text" id="nome" name="nome" required>
+      
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao">
+      
+      <label for="userId">ID do Usuário Responsável:</label>
+      <input type="text" id="userId" name="userId" required>
+      
+      <button type="submit">Adicionar Projeto</button>
+    </form>
+    <a href="/project/list">Voltar para a Lista de Projetos</a>
+  </div>
+</body>
+</html>

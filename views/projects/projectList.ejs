@@ -1,0 +1,29 @@
+<!-- views/projects/projectList.ejs -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Lista de Projetos</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Projetos</h1>
+    <ul>
+      <% projects.forEach(project => { %>
+        <li>
+          <strong>Nome:</strong> <%= project.nome %> |
+          <strong>Descrição:</strong> <%= project.descricao %> |
+          <strong>ID do Usuário:</strong> <%= project.userId %> |
+          <a href="/project/edit/<%= project._id %>">Editar</a>
+          <form action="/project/delete/<%= project._id %>?_method=DELETE" method="POST" style="display: inline;">
+            <button type="submit">Deletar</button>
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+    <a href="/">Voltar para a Página Inicial</a>
+  </div>
+</body>
+</html>
