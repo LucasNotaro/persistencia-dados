@@ -1,7 +1,7 @@
 
 # Persistência de Dados - Exercício Prático
 
-Este projeto faz parte de um exercício prático da faculdade, o objetivo é desenvolver uma API de gerenciamento de usuários e projetos, utilizando Express, Mongoose e EJS. A API permite a criação, atualização, exclusão e listagem de usuários e projetos.
+Este projeto faz parte de um exercício prático da faculdade de tecnologia de Votorantim, o objetivo é desenvolver uma API de gerenciamento de usuários e projetos, utilizando Express, Mongoose e EJS. A API permite a criação, atualização, exclusão e listagem de usuários e projetos.
 
 ## Funcionalidades
 
